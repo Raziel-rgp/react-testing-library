@@ -37,4 +37,11 @@ describe('5- Teste os Componentes <Pokedex.js />', () => {
 
     expect(screen.getAllByTestId('pokemon-name'));
   });
+  test('verifica se é possivel clicar no all', () => {
+    renderWithRouter(<App />);
+
+    const all = screen.getByRole('button', { name: /all/i });
+    expect(all).toBeEnabled();
+    userEvent.click(all);
+  });
 });
