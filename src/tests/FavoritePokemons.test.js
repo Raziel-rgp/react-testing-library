@@ -6,8 +6,7 @@ import { FavoritePokemons } from '../pages';
 describe('testes da pagina /favorite', () => {
   test('', () => {
     renderWithRouter(<FavoritePokemons />);
-    const favPok = screen.getByRole('heading', { name:
-      /No favorite pokemon found/i });
+    const favPok = screen.getByText(/No favorite pokemon found/i);
     expect(favPok).toBeInTheDocument();
   });
 });
