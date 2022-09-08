@@ -9,6 +9,5 @@ const filterPokemon = [...new Set(pokemons.map(({ type }) => type))];
 
 describe('', () => {
   test('', () => {
-    
   });
 }); */
