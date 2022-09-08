@@ -6,7 +6,7 @@ import { About } from '../pages';
 describe('testes "/about"', () => {
   test('Teste se a página contém as informações sobre a Pokédex', () => {
     renderWithRouter(<About />);
-    const aboutPok = screen.getByRole('heading', { description: /About Pokédex/i });
+    const aboutPok = screen.getByRole('heading', { name: /About Pokédex/i });
     expect(aboutPok).toBeInTheDocument();
   });
   test('Teste se a imagem é src da imagem está certo corretamente', () => {
