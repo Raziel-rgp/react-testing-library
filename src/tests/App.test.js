@@ -1,7 +1,7 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
 import App from '../App';
-import renderWithRouter from './helpers/renderPath';
+import renderWithRouter from './helpers/renderWithRouter';
 
 describe('1- Será validado se o cabeçario está funcional ', () => {
   test('Será verificado se na pagina inicial é renderizada corretamente', () => {

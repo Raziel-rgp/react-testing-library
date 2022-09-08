@@ -1,9 +1,9 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
-import renderWithRouter from './helpers/renderPath';
+import renderWithRouter from './helpers/renderWithRouter';
 import { NotFound } from '../pages';
 
-describe('', () => {
+describe('4- Teste o componente <NotFound.js />', () => {
   test('Teste se a imagem é src da imagem está certo corretamente', () => {
     renderWithRouter(<NotFound />);
     const notFoundImg = screen.getByRole('img', { name: /Pikachu crying because/i });

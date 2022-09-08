@@ -1,9 +1,9 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
-import renderWithRouter from './helpers/renderPath';
+import renderWithRouter from './helpers/renderWithRouter';
 import { FavoritePokemons } from '../pages';
 
-describe('testes da pagina /favorite', () => {
+describe('3- Teste o componente <FavoritePokemon.js />', () => {
   test('', () => {
     renderWithRouter(<FavoritePokemons />);
     const favPok = screen.getByText(/No favorite pokemon found/i);
