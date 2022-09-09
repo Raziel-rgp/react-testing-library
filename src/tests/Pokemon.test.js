@@ -26,9 +26,14 @@ describe('Teste o componente <Pokemon.js /> ', () => {
     expect(details).toHaveAttribute('href', '/pokemons/25');
     userEvent.click(details);
 
-    userEvent.click(screen.getByRole('checkbox', { name: /pokémon favoritado\?/i }));
+    userEvent.click(screen.getByRole('checkbox', { name: /Pokémon favoritado\?/i }));
     const favImg = screen.getByRole('img', { name: /pikachu is marked as favorite/i });
     expect(favImg).toHaveAttribute('src', '/star-icon.svg');
     expect(favImg).toHaveAttribute('alt', 'Pikachu is marked as favorite');
+  });
+  test('Verifica se há elemento de type na tela', () => {
+    renderWithRouter(<App />);
+    const pokType = screen.getByTestId('pokemon-type');
+    expect(pokType).toHaveTextContent('Electric');
   });
 });
